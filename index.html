@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PadFour — four-bar live pad desk</title>
+  <meta name="description" content="Four live-instrument bars of sustained pads over a harmonic bed so the loop has air and finishes." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<div id="tap">Tap to start audio</div>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>PadFour</h1>
+  <p class="lead">Four-bar live pad desk. Generators loop chords without air. Session players write four live bars of sustained strings — violin holds, swells, layered pads — over the bed so the section has space and finishes. Live FluidR3 samples only. Loop-ready samples with real envelopes.</p>
+  <p class="status" id="status">Seating chairs…</p>
+  <div class="controls">
+    <label>BPM <input id="bpm" type="number" min="60" max="180" value="92" /></label>
+    <label>Key <select id="key"><option>A minor</option><option>C major</option><option>D minor</option><option>E major</option><option>G major</option></select></label>
+    <label>Chords <input id="chords" type="text" value="Am F C G" placeholder="Am F C G" /></label>
+  </div>
+  <p class="eyebrow">Groove</p>
+  <div class="row" id="grooves"></div>
+  <p class="eyebrow">Pad recipe</p>
+  <div class="row" id="recipes"></div>
+  <p class="eyebrow">Form · bed 1–4 · pad 5–8</p>
+  <div class="bars" id="bars"></div>
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+  <p class="note">Tap to start audio. On iOS the silent switch mutes Web Audio. Changes apply on the next step. Export WAV + MIDI at any time. Hold the longest pad at slowest tempo — it sustains.</p>
+</main>
+<div class="dock">
+  <button id="playA">A · Bed loop</button>
+  <button id="playB">B · Full form</button>
+  <button id="play8">8 · Pad only</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="export">Export WAV+MIDI</button>
+  <button class="ghost" id="copy">Copy punch</button>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
